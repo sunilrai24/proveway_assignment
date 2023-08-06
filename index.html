@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="bundle">
+        <!-- Title Section start -->
+        <div class="title">
+          <span class="title_line"></span>
+          <h3>Bundle & Save</h3>
+          <span class="title_line"></span>
+        </div>
+        <!-- Title section End -->
+        <!-- pair-1 Start-->
+        <div class="pair">
+          <div class="pair_option">
+            <div class="pair_input">
+              <input
+                type="radio"
+                onchange="handleOnchange(this)"
+                id="1-pair"
+                name="pair"
+              />
+            </div>
+            <div class="pair_input-label">
+              <label for="1-pair" class="pair_name"
+                >1 Pair
+                <p>
+                  <span class="pair_price-new">DKK 195.00</span>
+                </p></label
+              >
+            </div>
+          </div>
+          <div class="pair_offer">
+            <span>50% OFF</span>
+          </div>
+        </div>
+        <!-- pair-1 End -->
+
+        <!-- pair-2 Start-->
+        <div class="pair pair--active">
+          <div class="pair_option">
+            <div class="pair_input">
+              <input
+                type="radio"
+                id="2-pair"
+                onchange="handleOnchange(this)"
+                name="pair"
+                checked
+              />
+            </div>
+            <div class="pair_input-label">
+              <label for="2-pair" class="pair_name"
+                >2 Pair
+                <p>
+                  <span class="pair_price-new">DKK .00</span
+                  ><span class="pair_price-old"><s>DKK 195.00</s></span>
+                </p></label
+              >
+              <table>
+                <tr>
+                  <th></th>
+                  <th>Size</th>
+                  <th>Color</th>
+                </tr>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <select name="" id="">
+                      <option value="S">S</option>
+                      <option value="S">M</option>
+                      <option value="S">L</option>
+                      <option value="S">XL</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select name="" id="">
+                      <option value="Color">Color</option>
+                      <option value="Color">Red</option>
+                      <option value="Color">Blue</option>
+                      <option value="Color">Yellow</option>
+                      <option value="Color">Green</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#2</td>
+                  <td>
+                    <select name="" id="">
+                      <option value="S">S</option>
+                      <option value="S">M</option>
+                      <option value="S">L</option>
+                      <option value="S">XL</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select name="" id="">
+                      <option value="Color">Color</option>
+                      <option value="Color">Red</option>
+                      <option value="Color">Blue</option>
+                      <option value="Color">Yellow</option>
+                      <option value="Color">Green</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="pair_offer">
+            <h4>Most Popular</h4>
+            <span>50% OFF</span>
+          </div>
+        </div>
+        <!-- pair-2 End -->
+
+        <!-- pair-3 Start-->
+        <div class="pair">
+          <div class="pair_option">
+            <div class="pair_input">
+              <input
+                type="radio"
+                id="3-pair"
+                onchange="handleOnchange(this)"
+                name="pair"
+              />
+            </div>
+            <div class="pair_input-label">
+              <label for="3-pair" class="pair_name"
+                >3 Pair
+                <p>
+                  <span class="pair_price-new">DKK 195.00</span>
+                </p></label
+              >
+            </div>
+          </div>
+          <div class="pair_offer">
+            <span>50% OFF</span>
+          </div>
+        </div>
+        <!-- pair-3 End-->
+        <div class="total">
+          <div class="total_shipping">Free 2 Day Shipping</div>
+          <div class="total_price">Total : <b>DKK 360.00</b></div>
+        </div>
+
+        <div class="add-to-cart">
+          <button>+ Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function handleOnchange(e) {
+        // Remove prev active
+        const node = document.querySelector(".pair.pair--active");
+        if (node) {
+          node.classList.remove("pair--active");
+        }
+        // Make selected active
+        const newNode = e.parentNode.parentNode.parentNode;
+        newNode.classList.add("pair--active");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+/* Font-family Start */
+@font-face {
+  font-family: "Metropolis Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Metropolis Regular"),
+    url("./font/Metropolis-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Metropolis Medium"),
+    url("./font/Metropolis-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis Semi Bold";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Metropolis Semi Bold"),
+    url("./font/Metropolis-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Metropolis Bold"),
+    url("./font/Metropolis-Bold.woff") format("woff");
+}
+/* Font-family End */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Metropolis Regular";
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-family: "Metropolis Medium";
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  padding: 4px;
+  padding-left: 0px;
+  padding-right: 6px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.bundle {
+  width: 340px;
+  margin: 20px auto;
+}
+
+/* For title */
+.bundle .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.bundle .title_line {
+  background-color: #c8c8c8;
+  height: 1px;
+  width: 100%;
+  flex: 1;
+  flex-grow: 0.5;
+}
+
+.bundle .title h3 {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #007f61;
+  flex: 1;
+}
+
+/*For Pair*/
+.bundle .pair {
+  display: flex;
+  border: 1px solid #c8c8c8;
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 18px;
+}
+
+.bundle .pair.pair--active {
+  border: 1px solid #007f61;
+  background-color: #f4fbf9;
+}
+
+.bundle .pair .pair_option {
+  display: flex;
+  flex-basis: 68%;
+}
+
+.bundle .pair .pair_option .pair_input {
+  max-height: 48px;
+  display: flex;
+}
+.bundle .pair .pair_option .pair_input input {
+  cursor: pointer;
+}
+
+.bundle .pair .pair_option .pair_input-label {
+  flex-basis: 1;
+}
+
+.bundle .pair .pair_option .pair_input-label p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bundle .pair .pair_option .pair_input-label label {
+  cursor: pointer;
+  padding-left: 18px;
+  float: left;
+}
+.bundle .pair .pair_option .pair_input-label table {
+  font-size: 10px;
+}
+.bundle .pair .pair_option .pair_input-label table th {
+  text-align: left;
+  font-weight: 400;
+}
+.bundle .pair .pair_option .pair_input-label table select {
+  border: 1px solid #d9d9d9;
+  padding: 6px;
+  border-radius: 2px;
+  min-width: 65px;
+}
+.bundle .pair .pair_option .pair_input-label .pair_price-new {
+  font-weight: 500;
+  font-family: "Metropolis Medium";
+}
+
+.bundle .pair .pair_option .pair_input-label .pair_price-old {
+  font-size: 10px;
+  color: #9f9f9f;
+  padding-left: 24px;
+}
+
+.bundle .pair .pair_offer {
+  flex-basis: 32%;
+  font-weight: 500;
+  font-family: "Metropolis Medium";
+  font-size: 14px;
+  max-height: 48px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.bundle .pair .pair_offer h4 {
+  color: #007f61;
+}
+
+.bundle .total {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  font-size: 14px;
+}
+
+.bundle .total .total_shipping {
+  color: #007f61;
+  font-weight: 500;
+}
+.bundle .add-to-cart button {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 0;
+  background-color: #007f61;
+  color: #fff;
+  border: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px 4px 4px 0px;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
